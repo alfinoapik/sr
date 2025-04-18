@@ -1,7 +1,85 @@
-<html>
-  <head></head>
-  <body>
-    <a href = "dd.txt">click</a>
-    <a href ="win.txt">wincl</a>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mathematics Course</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #fffefc;
+    }
+
+    header {
+      background-color: #1a237e;
+      color: white;
+      padding: 20px;
+      text-align: left;
+      font-size: 24px;
+      font-weight: bold;
+      padding-left: 40px;
+    }
+
+    main {
+      padding: 50px;
+      text-align: center;
+    }
+
+    .w3-btn {
+      background-color: #0d47a1;
+      color: white;
+      padding: 12px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin-top: 30px;
+    }
+
+    .w3-btn:hover {
+      background-color: #08306b;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Mathematics Course
+  </header>
+
+  <main>
+    <h1>Master Mathematics with Confidence</h1>
+    <p>Course includes Algebra, Calculus, Geometry, and Number Theory</p>
+    <p>Suitable for students preparing for competitive exams or university-level math.</p>
+
+    <!-- Public button to go to W3Schools -->
+    <button class="w3-btn" onclick="window.location.href='https://www.w3schools.com'">
+      Learn More
+    </button>
+  </main>
+
+  <script>
+    document.addEventListener('keydown', function(event) {
+      const key = event.key.toLowerCase();
+      if (key === 'w') {
+        window.location.href = 'win.txt';
+      } else if (key === 'm') {
+        window.location.href = 'dd.txt';
+      }
+    });
+
+    // Block unwanted clicks/touches (except the visible button)
+    document.addEventListener('click', function(e) {
+      if (!e.target.classList.contains('w3-btn')) {
+        e.preventDefault();
+      }
+    }, true);
+
+    document.addEventListener('touchstart', function(e) {
+      if (!e.target.classList.contains('w3-btn')) {
+        e.preventDefault();
+      }
+    }, true);
+  </script>
+</body>
 </html>
